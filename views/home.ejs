@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Tahoma, "Trebuchet MS", sans-serif;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+   <h1>URL SHORTENER</h1>
+   
+   <% if (id) { %>
+    <p>URL Generated: <a href="http://localhost:8001/url/<%= id %>">http://localhost:8001/url/<%= id %></a></p>
+   <% } %>
+   
+   <form method="POST" action="/url">
+    <label>Enter your original URL</label>
+    <input type="text" 
+     name="url"                                      
+     placeholder="https://example.com"
+    />
+    <button type="submit">GENERATE</button>
+   </form>
+
+</body>
+</html>
